@@ -41,5 +41,5 @@ export const update = async ({
 
   bookings[bookIndex] = newBook;
 
-  return newBook;
+  return { ...newBook, property };
 };
