@@ -24,7 +24,7 @@ export const BookPage = () => {
   }, [slug, dispatch]);
 
   return (
-    <div className="container pt-10">
+    <div className="container pt-10 pb-14">
       <Button variant="secondary" asChild>
         <Link to="/">
           <ChevronLeft />
