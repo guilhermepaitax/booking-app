@@ -15,7 +15,9 @@ interface IFilters {
   date?: DateRange;
 }
 
-export const getAll = async (filters?: IFilters): Promise<IGetAllResponse> => {
+export const getAll = async (
+  filters?: IFilters | void
+): Promise<IGetAllResponse> => {
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   const data = properties.map((property) => {
