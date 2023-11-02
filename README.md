@@ -2,6 +2,8 @@
 
 ## Welcome! 👋
 
+![Design preview for the Booking App](./.github/app-preview.png)
+
 This project is a web application that allows users to create, manage, read, update, and delete bookings. It ensures a seamless user experience by implementing validation logic to prevent double bookings and validating start and end dates for each booking. The application is built using technologies such as ViteJS, Typescript, ReactJS, Redux Toolkit, and other libraries to provide a responsive and intuitive booking management system.
 
 Check out the live application at:
