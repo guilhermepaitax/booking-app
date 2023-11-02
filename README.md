@@ -1,27 +1,50 @@
 # Booking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Welcome! 👋
 
-Currently, two official plugins are available:
+This project is a web application that allows users to create, manage, read, update, and delete bookings. It ensures a seamless user experience by implementing validation logic to prevent double bookings and validating start and end dates for each booking. The application is built using technologies such as ViteJS, Typescript, ReactJS, Redux Toolkit, and other libraries to provide a responsive and intuitive booking management system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live application at:
 
-## Expanding the ESLint configuration
+Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Create Booking: Users can create new bookings by providing necessary information such as start and end dates, along with other relevant details.
+- Read Booking: Users can view existing bookings with all their details.
+- Update Booking: Users can modify existing bookings, updating information like dates, duration, and other properties.
+- Delete Booking: Users can delete bookings that are no longer needed, removing them from the system.
+- Global State: The application stores booking data in a global state, ensuring consistent data management across components.
+- Validation: The system prevents double bookings by implementing logic to detect overlapping time slots. Additionally, it validates start and end dates to ensure accurate booking information.
+- Responsive Design: The webpages are fully responsive, providing optimal user experience on both desktop and mobile devices.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## How to Use the App
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Step 1: Clone the repository, navigate to the project folder, and enter the application.
+
+Step 2: Install project dependencies using the following command:
+`yarn install`
+
+Step 3: Start the development server using the following command:
+`yarn dev`
+
+Step 4: Access the application through your browser at http://localhost:5173.
+
+Step 5 - To build your application, run the command `yarn build` and then `yarn preview`.
+
+## Technologies Used
+
+> - ViteJS
+> - Typescript
+> - ReactJS
+> - Redux Toolkit
+> - React Router Dom
+> - Tailwind CSS
+> - Radix UI
+> - Shadcn UI
+> - Date-fns
+> - Lucide Icons
+
+## Author
+
+Developed by Guilherme Paitax. Any questions or suggestions can be contacted via email grpaitax@gmail.com
