@@ -7,7 +7,7 @@ interface IGetByIdResponse {
 }
 
 export const getById = async (id: string): Promise<IGetByIdResponse> => {
-  await new Promise((resolve) => setTimeout(resolve, 200));
+  await new Promise((resolve) => setTimeout(resolve, 50));
 
   const booking = bookings.find((b) => b.id === id);
 

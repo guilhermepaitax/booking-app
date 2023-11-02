@@ -3,7 +3,7 @@ import bookings from "@/lib/bookings";
 type IDeleteResponse = boolean;
 
 export const cancel = async (id: string): Promise<IDeleteResponse> => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  await new Promise((resolve) => setTimeout(resolve, 50));
 
   const bookIndex = bookings.findIndex((b) => b.id === id);
 

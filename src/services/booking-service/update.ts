@@ -18,7 +18,7 @@ export interface IUpdateRequest {
 export const update = async ({
   data,
 }: IUpdateRequest): Promise<IUpdateResponse> => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  await new Promise((resolve) => setTimeout(resolve, 50));
 
   const property = properties.find((p) => p.id === data.id_property);
   const bookIndex = bookings.findIndex((p) => p.id === data.id);

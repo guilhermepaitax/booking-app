@@ -8,7 +8,7 @@ interface IGetAllResponse {
 }
 
 export const getAll = async (): Promise<IGetAllResponse> => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  await new Promise((resolve) => setTimeout(resolve, 50));
 
   const data = bookings.map((booking) => {
     const property = properties.find((p) => p.id === booking.id_property);
