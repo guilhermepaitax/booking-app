@@ -18,7 +18,7 @@ export interface IPropertyState {
 
 const getAllProperties = createAsyncThunk(
   "property/getAllProperties",
-  async (filters?: IFilters) => {
+  async (filters?: IFilters | void) => {
     const response = await propertyService.getAll(filters);
     return response;
   }
