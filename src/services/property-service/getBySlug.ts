@@ -1,5 +1,3 @@
-import { Matcher } from "react-day-picker";
-
 import { IProperty } from "@/entities/property";
 import properties from "@/lib/properties";
 import bookings from "@/lib/bookings";
@@ -19,7 +17,7 @@ export const getBySlug = async (slug: string): Promise<IGetBySlugResponse> => {
     };
   }
 
-  const disabled_days: Matcher[] = bookings
+  const disabled_days = bookings
     .filter((b) => b.id_property === property?.id)
     .map((b) => ({ from: b.start_date, to: b.end_date }));
 

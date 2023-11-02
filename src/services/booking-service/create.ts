@@ -18,7 +18,7 @@ export interface ICreateRequest {
 export const create = async ({
   data,
 }: ICreateRequest): Promise<ICreateResponse> => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  await new Promise((resolve) => setTimeout(resolve, 50));
 
   const property = properties.find((p) => p.id === data.id_property);
 
