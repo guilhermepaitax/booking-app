@@ -1,5 +1,6 @@
 import { IBooking } from "@/entities/booking";
 import bookings from "@/lib/bookings";
+import { calculateTotalPrice } from "@/lib/calculateTotalPrice";
 import properties from "@/lib/properties";
 
 type IUpdateResponse = IBooking;
@@ -8,7 +9,7 @@ export interface IUpdateRequest {
   data: {
     id: string;
     id_property: string;
-    start_date?: Date;
+    start_date: Date;
     end_date?: Date;
     guests_count?: number;
   };
@@ -30,7 +31,13 @@ export const update = async ({
     throw new Error("Property not found!");
   }
 
-  const newBook = { ...bookings[bookIndex], ...data };
+  const total_price = calculateTotalPrice({
+    endDate: data.end_date,
+    startDate: data.start_date,
+    valuePerNight: property.price_per_night,
+  });
+
+  const newBook = { ...bookings[bookIndex], ...data, total_price };
 
   bookings[bookIndex] = newBook;
 
